@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Countdown</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="center">
+        <h1><span>2050</span><br>The End of Fish</h1>
+        <div id="clock"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+        integrity="sha256-2KoK7Mb0yxpgUVvAk/HJ2jig0SYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="countdown.js"></script>
+    <script type="text/javascript">
+        $('#clock').countdown('2022/1/1', function (event) {
+            var $this = $(this).html(event.strftime(''
+                // + '<div><span>%Y</span><span>Years</span></div>'
+                + '<div><span>%W</span><span>Weeks</span></div>'
+                + '<div><span>%D</span><span>Days</span></div>'
+                + '<div><span>%H</span><span>Hr</span></div>'
+                + '<div><span>%M</span><span>Min</span></div>'
+                + '<div><span>%S</span><span>Sec</span></div>'
+            ))
+        });
+    </script>
+</body>
+
+</html>
